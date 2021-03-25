@@ -1,8 +1,64 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "World Benefits";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Where shall we go and why?</h1>
+
+
+    <form>
+        <h2>What things are important to you?</h2>
+        <input type="text" autocomplete="off" name="name" placeholder="Number one"><input type="range" min="1" max="100" value="50" class="slider" id="rangeOne"><p>How important is this: <span id="valOne"></span></p><br />
+        <script>
+            var slideOne = document.getElementById("rangeOne");
+            var labelOne = document.getElementById("valOne");
+            slideOne.oninput = function () {
+                labelOne.innerHTML = this.value;
+            }
+        </script>
+        <input type="text" autocomplete="off" name="name" placeholder="Number two"><input type="range" min="1" max="100" value="50" class="slider" id="rangeTwo"><p>How important is this: <span id="valTwo"></span></p><br />
+        <script>
+            var slideTwo = document.getElementById("rangeTwo");
+            var labelTwo = document.getElementById("valTwo");
+            slideTwo.oninput = function () {
+                labelTwo.innerHTML = this.value;
+            }
+        </script>
+        <input type="text" autocomplete="off" name="name" placeholder="Number three"><input type="range" min="1" max="100" value="50" class="slider" id="rangeThree"><p>How important is this:  <span id="valThree"></span></p><br />
+        <script>
+            var slideThree = document.getElementById("rangeThree");
+            var labelThree = document.getElementById("valThree");
+            slideThree.oninput = function () {
+                labelThree.innerHTML = this.value;
+            }
+        </script>
+        <input type="text" autocomplete="off" name="name" placeholder="Number four"><input type="range" min="1" max="100" value="50" class="slider" id="rangeFour"><p>How important is this: <span id="valFour"></span></p><br />
+        <script>
+            var slideFour = document.getElementById("rangeFour");
+            var labelFour = document.getElementById("valFour");
+            slideFour.oninput = function () {
+                labelFour.innerHTML = this.value;
+            }
+        </script>
+    </form>
 </div>
+
+
+
+@*var slideCol = document.getElementById("id1");
+var slideSq = document.getElementById("id2");
+var slidePic = document.getElementById("id3");
+var y = document.getElementById("f");
+y.innerHTML = slideCol.value;
+
+slideCol.oninput = function() {
+    y.innerHTML = this.value;
+}
+
+slideSq.oninput = function() {
+    y.innerHTML = this.value;
+}
+
+slidePic.oninput = function() {
+    y.innerHTML = this.value;
+}*@
