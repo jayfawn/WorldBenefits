@@ -6,7 +6,7 @@
     <h1 class="display-4">Where shall we go and why?</h1>
 
 
-    <form>
+    <form action="/places/places" method="post">
         <h2>What things are important to you?</h2>
         <input type="text" autocomplete="off" name="name" placeholder="Number one"><input type="range" min="1" max="100" value="50" class="slider" id="rangeOne"><p>How important is this: <span id="valOne"></span></p><br />
         <script>
@@ -40,6 +40,8 @@
                 labelFour.innerHTML = this.value;
             }
         </script>
+
+        <input type="submit" name="submit">
     </form>
 </div>
 
